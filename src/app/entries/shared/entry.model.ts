@@ -1,4 +1,3 @@
-
 export class Entry {
     title: string;
     photo: string;
