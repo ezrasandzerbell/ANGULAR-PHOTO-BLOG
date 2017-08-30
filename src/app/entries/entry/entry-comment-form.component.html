@@ -1,11 +1,14 @@
-<form>
+<!--  ONE WAY DATA BINDING: (submit) event binding on the left, "onSubmit()" handling expression is on the right -->
+<!-- When submit event occurs, onSubmit() handling expression is executed -->
+
+<form (submit)="onSubmit()">
     <div>
         <label for="name">Name</label>
-        <input type ="text" name="name" /> 
+        <input type ="text" name="name" [(ngModel)]="name" /> 
     </div>
     <div>
         <label for="comment">Comment</label>
-        <textarea name="comment" type ="text"></textarea>
+        <textarea name="comment" type ="text" [(ngModel)]="comment"></textarea>
     </div>
     <div>
         <button>Submit</button>

@@ -11,5 +11,8 @@
     <div class="comment" *ngFor="let comment of entry.comments">   
         <p><strong>{{comment.name}}</strong> {{comment.comment}}</p>
     </div>
-    <app-entry-comment-form></app-entry-comment-form>
+    <!-- (onCommentAdded) is the event emitted from the entry comment form component -->
+    <!-- "onCommentAdded($event)" is the method that pushes the comment onto the existing array-->
+    <!-- $event is the value emitted by the child event emitter -->
+    <app-entry-comment-form (onCommentAdded)="onCommentAdded($event)"></app-entry-comment-form>
 </div>
