@@ -1,7 +1,8 @@
 <!--  ONE WAY DATA BINDING: (submit) event binding on the left, "onSubmit()" handling expression is on the right -->
 <!-- When submit event occurs, onSubmit() handling expression is executed -->
 
-<form (submit)="onSubmit()">
+<!-- # symbol is used to create local variable.  -->
+<form (submit)="onSubmit()" #commentForm="ngForm">
     <div>
         <label for="name">Name</label>
         <input type ="text" name="name" [(ngModel)]="name" /> 

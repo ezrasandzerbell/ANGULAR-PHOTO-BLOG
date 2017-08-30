@@ -10,7 +10,7 @@ import { Entry } from '../shared/entry.model';
 export class EntryComponent {
    @Input() entry: Entry;
 
-//    comment receives inline definition, an object containing the key-value elements with declared data types
+//    comment key has inline object definition: name and comment keys
 
    onCommentAdded(comment: {name: string; comment: string;}) {
         this.entry.comments.push(comment)
