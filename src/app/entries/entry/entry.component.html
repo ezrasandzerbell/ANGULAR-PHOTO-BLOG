@@ -4,6 +4,8 @@
     <figcaption>{{entry.description}}</figcaption>
 </figure>
 <div class="actions">
+
+    <!-- the parenthesis around (click) indicates it is event-binding -->
     <button type="button" (click)="isLiked = !isLiked" [ngClass]="{liked: isLiked}">❤</button>
     <button type="button" (click)="showComments = !showComments">Comments ({{entry.comments.length}})</button>
 </div>
@@ -14,5 +16,7 @@
     <!-- (onCommentAdded) is the event emitted from the entry comment form component -->
     <!-- "onCommentAdded($event)" is the method that pushes the comment onto the existing array-->
     <!-- $event is the value emitted by the child event emitter -->
-    <app-entry-comment-form (onCommentAdded)="onCommentAdded($event)"></app-entry-comment-form>
+
+    <!-- with [entryId], data is flowing from the current entry component down to the child comment form component -->
+    <app-entry-comment-form (onCommentAdded)="onCommentAdded($event)" [entryId]="entry.id"></app-entry-comment-form>
 </div>
