@@ -40,7 +40,6 @@ export class EntryCommentFormComponent {
                 this.onCommentAdded.emit(comment);
                     this.commentForm.resetForm();
             })
-        this.onCommentAdded.emit(comment);
 
         // reset form method can be accessed due to NgForm argument
         this.commentForm.resetForm();

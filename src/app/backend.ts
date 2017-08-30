@@ -7,70 +7,57 @@ export class InMemoryEntryService implements InMemoryDbService {
         let entries = [
             {
                 id: 1,
-                title: 'Burning Sundown Behind Trees',
-                description: 'A view of the setting sun through trees',
-                photo: require('../../photos/Burning-sundown-behind-trees.jpg'),
+                title: 'Linda A. Kerns',
+                description: '"I love having Ruby! My clients never get voicemail during work hours and calls are always answered professionally. Getting emails of who called right away is super convenient and screening out the sales calls saves a huge amount of time!"',
+                photo: require('../../photos/Linda-Kerns.jpg'),
                 comments: [
                     {
                         id: 1,
                         name: 'Jane Smith',
-                        comment: 'This is my favorite! I love it!'
+                        comment: '8/29/17: Client Jane Smith called asking about their appointment next week'
+                    },
+                    {
+                        id: 2,
+                        name: 'Alecia Clark',
+                        comment: '8/27/17: Client Jason Smith called asking about liability insurance'
                     }
                 ]
             },
             {
                 id: 2,
-                title: 'Water Lilies and Algas',
-                description: 'Still water with floating lilies',
-                photo: require('../../photos/Water-lilies-and-algas.jpg'),
+                title: 'Jerry Simoneaux',
+                description: '“What I enjoy most about Ruby Receptionists is their happy attitude. You can hear the smile in their voices. Really. And clients love that. Combine that with the wonderful phone app that lets me update my status and get my messages anywhere, and you have one heckuva great company.”',
+                photo: require('../../photos/jerry.jpg'),
                 comments: [
-                    {
-                        id: 2,
-                        name: 'Kyle Jones',
-                        comment: 'Nice!'
-                    },
                     {
                         id: 3,
                         name: 'Alecia Clark',
-                        comment: 'All the greens make this amazing.'
+                        comment: '8/25/17: Client Jason Smith called asking about liability insurance.'
                     }
                 ]
             },
             {
                 id: 3,
-                title: 'German Steam Engine',
-                description: 'Trains at the station',
-                photo: require('../../photos/German-steam-engine-No.4.jpg'),
+                title: 'Richard Jaffe',
+                description: '“My phone line is my lifeline. Using Ruby has almost doubled my client retention rate, lowered my overhead, and allows me to be where I need to be for my practice without worrying about incoming calls. Other services I have tried in the past do not come close to Ruby.”',
+                photo: require('../../photos/richard.jpg'),
                 comments: []
             },
             {
                 id: 4,
-                title: 'Red Sun Stripe at Horizon',
-                description: 'Green fields and a glimpse of sunlight',
-                photo: require('../../photos/Red-sun-stripe-at-horizon.jpg'),
+                title: 'Sheila Rambeck',
+                description: '“Ruby has been a life-saver (and company-saver) for me. In the field I’m in, if you don’t answer the phone, the client calls the next person on their list. Ruby ensures my clients and future clients talk to a live person and Ruby gives the message to me immediately so I can call them as soon as I’m free. I’m a very satisfied customer!”',
+                photo: require('../../photos/sheila.jpg'),
                 comments: [
                     {
                         id: 4,
                         name: 'Steve Johnson',
-                        comment: 'It looks like trouble is on the way.'
+                        comment: '8/27/17: Client Julian Smith called to ask about divorce settlement.'
                     },
                     {
                         id: 5,
                         name: 'Becky M',
-                        comment: 'I imagine this was a shot of a storm that just passed.'
-                    }
-                ]
-            },
-            {
-                id: 5,
-                title: 'Sundown Behind Fields',
-                description: 'Clouds taking form at sun set',
-                photo: require('../../photos/Sundown-behind-fields.jpg'),
-                comments: [
-                    {
-                        id: 6,
-                        name: 'Lisa Frank',
-                        comment: 'Beautiful!'
+                        comment: '8/25/17: Client Jenny Smith called with contact number for doctor.'
                     }
                 ]
             }

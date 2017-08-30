@@ -63,8 +63,6 @@ figcaption {
 
 img {
     display: block;
-    max-width: 100%;
-    min-width: 100%;
     height: auto;
 }
 
@@ -119,4 +117,13 @@ app-entry-comment-form textarea {
 .alert.alert-danger {
     background-color: #9a0000;
     color: #fff;
+}
+
+.contained {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+#ruby-header {
+    max-width: 100%;
 }

@@ -1,22 +1,27 @@
-<h2>{{entry.title}}</h2>
-<figure>
-    <img src="{{entry.photo}}">
-    <figcaption>{{entry.description}}</figcaption>
-</figure>
-<div class="actions">
-
-    <!-- the parenthesis around (click) indicates it is event-binding -->
-    <button type="button" (click)="isLiked = !isLiked" [ngClass]="{liked: isLiked}">❤</button>
-    <button type="button" (click)="showComments = !showComments">Comments ({{entry.comments.length}})</button>
-</div>
-<div class="comments" *ngIf="showComments">
-    <div class="comment" *ngFor="let comment of entry.comments">   
-        <p><strong>{{comment.name}}</strong> {{comment.comment}}</p>
+<div class="well">
+    <h2>{{entry.title}}</h2>
+        <div class="row">
+            <div class="col-md-4"><img src="{{entry.photo}}"></div>
+            <div class="col-md-8 description-font">{{entry.description}}</div>
+        </div>
+    <div class="row">
+        <div class="actions">
+                
+            <!-- the parenthesis around (click) indicates it is event-binding -->
+            <button type="button" (click)="isLiked = !isLiked" [ngClass]="{liked: isLiked}"><span style="font-size: 2em;">☑</span></button>
+            <button type="button" (click)="showComments = !showComments"> Call Log ({{entry.comments.length}})</button>
+        </div>
+        <div class="comments" *ngIf="showComments">
+            <div class="comment" *ngFor="let comment of entry.comments">   
+                <p><strong>{{comment.name}}</strong> {{comment.comment}}</p>
+            </div>
+            <!-- (onCommentAdded) is the event emitted from the entry comment form component -->
+            <!-- "onCommentAdded($event)" is the method that pushes the comment onto the existing array-->
+            <!-- $event is the value emitted by the child event emitter -->
+    
+            <!-- with [entryId], data is flowing from the current entry component down to the child comment form component -->
+            <app-entry-comment-form (onCommentAdded)="onCommentAdded($event)" [entryId]="entry.id"></app-entry-comment-form>
+        </div>
     </div>
-    <!-- (onCommentAdded) is the event emitted from the entry comment form component -->
-    <!-- "onCommentAdded($event)" is the method that pushes the comment onto the existing array-->
-    <!-- $event is the value emitted by the child event emitter -->
-
-    <!-- with [entryId], data is flowing from the current entry component down to the child comment form component -->
-    <app-entry-comment-form (onCommentAdded)="onCommentAdded($event)" [entryId]="entry.id"></app-entry-comment-form>
+    
 </div>

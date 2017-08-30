@@ -3,9 +3,10 @@
 
 <!-- # symbol is used to create local variable.  -->
 <!-- the paranthesis around submit make it event-binding -->
+<h3 style="text-decoration: underline;">Log new call:</h3>
 <form (submit)="onSubmit()" #commentForm="ngForm">
     <div>
-        <label for="name">Name</label>
+        <label for="name">Receptionist</label>
         <input type ="text" name="name" [(ngModel)]="name" /> 
     </div>
     <div>

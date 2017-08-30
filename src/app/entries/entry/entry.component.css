@@ -16,9 +16,7 @@ figcaption {
 }
 
 img {
-    display: block;
-    width: 100%;
-    height: auto;
+    height: 150px;
 }
 
 :host {
@@ -32,4 +30,9 @@ img {
 
 .liked {
     color: red;
+}
+
+.description-font {
+    font-size: 1.5em;
+    font-style: italic;
 }
